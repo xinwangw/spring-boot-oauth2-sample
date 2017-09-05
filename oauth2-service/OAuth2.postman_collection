@@ -1,0 +1,116 @@
+{
+	"variables": [],
+	"info": {
+		"name": "OAuth2",
+		"_postman_id": "22d4b931-fd29-295c-cb18-313e81330397",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get books (separate resource)",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8081/books?access_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6InRlc3QiLCJzY29wZSI6WyJvcGVuaWQiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTA0NjE2MTUwLCJhdXRob3JpdGllcyI6WyJST0xFX01FTUJFUiJdLCJqdGkiOiIxNzY3YTllMS1lYWMyLTRkNWMtOGEzNi02MTlkYmZkNGQ4NzIiLCJjbGllbnRfaWQiOiJwb3N0bWFuLWNsaWVudCJ9.eiNS8pp5NXVwwJiiMKEhY-KVSKQ9czEsetoBpldjA6brWD3tBnYfv2q89nbb3pxvQeonNXfRHnLu8LS4qUHCW0-8SEtAuDKm6QsC9vJOP7pKpvaqEnFnTYNxbjlZlULoqxnlBWChf2zWFQpQ3nYTZt-HZL7E_noEXPjYnxFFePWuSDaEtuXlF3Rz0dP7E0xd3BQ0MIb05-qN4Qix86cbaJ0v2wELaseRB5f6B8tsMp9sd0vqlWjY5S1pig84obA_u_oVMGJayI2VrDTtmwjGwwNQSCfC7eej5mAy4HArwvwN8b2K5U13ntoq6fOMgQm7SHV1EcdU55Hq7e2p547KEg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6InRlc3QiLCJzY29wZSI6WyJvcGVuaWQiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTA0NjE2MTUwLCJhdXRob3JpdGllcyI6WyJST0xFX01FTUJFUiJdLCJqdGkiOiIxNzY3YTllMS1lYWMyLTRkNWMtOGEzNi02MTlkYmZkNGQ4NzIiLCJjbGllbnRfaWQiOiJwb3N0bWFuLWNsaWVudCJ9.eiNS8pp5NXVwwJiiMKEhY-KVSKQ9czEsetoBpldjA6brWD3tBnYfv2q89nbb3pxvQeonNXfRHnLu8LS4qUHCW0-8SEtAuDKm6QsC9vJOP7pKpvaqEnFnTYNxbjlZlULoqxnlBWChf2zWFQpQ3nYTZt-HZL7E_noEXPjYnxFFePWuSDaEtuXlF3Rz0dP7E0xd3BQ0MIb05-qN4Qix86cbaJ0v2wELaseRB5f6B8tsMp9sd0vqlWjY5S1pig84obA_u_oVMGJayI2VrDTtmwjGwwNQSCfC7eej5mAy4HArwvwN8b2K5U13ntoq6fOMgQm7SHV1EcdU55Hq7e2p547KEg",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"test2\",\"password\":\"123456\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get me test",
+			"request": {
+				"url": {
+					"raw": "http://localhost:9999/api/me/test?access_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6InRlc3QiLCJzY29wZSI6WyJvcGVuaWQiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTA0NjE3MjA5LCJhdXRob3JpdGllcyI6WyJST0xFX01FTUJFUiJdLCJqdGkiOiI1ZjA4ZTVlZS0xMTA1LTRhMmMtODk1NC0yYTljNWE3MDdlNmEiLCJjbGllbnRfaWQiOiJwb3N0bWFuLWNsaWVudCJ9.MnjRZ3YVEDo1G1IlB2Ux-NJVfO8NM2Vvear2EnjRP6DscWredjHTWzXdmLZLlpCInDjjtLCa3Kx0OcJ6kKPfjq_pLlFNQLhZvf1FseElqzw2bStMY3Tetcmo-X7Z_N_q4556ngfp0EQjF961viDMtzp_K-d1C67ymb_crvpBy0y_pPWF_35su3BR0vYxfOyo8UhhMzGnqoerhqVjwy0yVXI9uawElYiiE5Dn_CBtYxe6hH_9zPosSzjRGl9QFW2cMVYdlYQAAaZoIlmNcJQzxf-aQAqPLkpzcGrWnJ6qHPc-owqN-3eytkIwaxGFI-E1YfHeHVrwdNjAtwUzPoVoDQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"api",
+						"me",
+						"test"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6InRlc3QiLCJzY29wZSI6WyJvcGVuaWQiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTA0NjE3MjA5LCJhdXRob3JpdGllcyI6WyJST0xFX01FTUJFUiJdLCJqdGkiOiI1ZjA4ZTVlZS0xMTA1LTRhMmMtODk1NC0yYTljNWE3MDdlNmEiLCJjbGllbnRfaWQiOiJwb3N0bWFuLWNsaWVudCJ9.MnjRZ3YVEDo1G1IlB2Ux-NJVfO8NM2Vvear2EnjRP6DscWredjHTWzXdmLZLlpCInDjjtLCa3Kx0OcJ6kKPfjq_pLlFNQLhZvf1FseElqzw2bStMY3Tetcmo-X7Z_N_q4556ngfp0EQjF961viDMtzp_K-d1C67ymb_crvpBy0y_pPWF_35su3BR0vYxfOyo8UhhMzGnqoerhqVjwy0yVXI9uawElYiiE5Dn_CBtYxe6hH_9zPosSzjRGl9QFW2cMVYdlYQAAaZoIlmNcJQzxf-aQAqPLkpzcGrWnJ6qHPc-owqN-3eytkIwaxGFI-E1YfHeHVrwdNjAtwUzPoVoDQ",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"test2\",\"password\":\"123456\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add user",
+			"request": {
+				"url": "http://localhost:9999/sso/user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"test1\",\"password\":\"12345\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
