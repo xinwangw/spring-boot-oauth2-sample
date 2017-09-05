@@ -1,16 +1,28 @@
 server:
   port: 9999
-  context-path: /sso
+  context-path: /api
 
 spring:
   datasource:
-    platform: h2
+      url: jdbc:mysql://localhost:3306/oauth2
+      username: root
+      password: password
+      driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        default_schema: oauth2
 # https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-1.5-Release-Notes#oauth-2-resource-filter
 security:
   oauth2:
+    client:
+        clientId: simple-client
+        clientSecret: 123456
+        accessTokenUri: http://localhost:9999/api/oauth/access_token
+        userAuthorizationUri: http://localhost:9999/api/oauth/authorize
     resource:
       filter-order: 3
-
+      user-info-uri: http://localhost:9999/api/user
 #logging:
 #  level:
 #    org.springframework.security: DEBUG

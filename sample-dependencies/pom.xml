@@ -15,7 +15,7 @@
         <spring.version>4.3.4.RELEASE</spring.version>
         <slf4j.version>1.7.7</slf4j.version>
         <logback-classic.version>1.2.1</logback-classic.version>
-        <mysql-connector-java.version>5.1.27</mysql-connector-java.version>
+        <mysql-connector-java.version>6.0.6</mysql-connector-java.version>
         <spring-boot.version>1.5.1.RELEASE</spring-boot.version>
         <docker.plugin.version>0.4.13</docker.plugin.version>
         <spring-cloud-dependencies.version>Camden.SR5</spring-cloud-dependencies.version>
