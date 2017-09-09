@@ -1,5 +1,5 @@
 use oauth2;
-insert into `users` ( `username`, `password`, `enabled`) values ( 'test', '$2a$10$hTGtbco/ZqgvosoQVWdOdeKYBcJSspdPpVtfqyF7uUUBVz0UtBXWy', '1');
+insert into `users` ( `username`, `user_password`, `enabled`) values ( 'test', '$2a$10$hTGtbco/ZqgvosoQVWdOdeKYBcJSspdPpVtfqyF7uUUBVz0UtBXWy', '1');
 
 insert into `authorities` ( `username`, `authority`) values ( 'test', 'ROLE_MEMBER');
 

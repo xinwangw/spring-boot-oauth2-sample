@@ -1,5 +1,6 @@
 package com.nari.oauth2.web;
 
+import com.nari.oauth2.user.CustomJdbcUserDetailsManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,6 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,7 +33,7 @@ public class UserApi {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserApi.class);
 
     @Autowired
-    private JdbcUserDetailsManager jdbcUserDetailsManager;
+    private CustomJdbcUserDetailsManager jdbcUserDetailsManager;
 
     @GetMapping("/user")
     public Principal user(Principal principal) {

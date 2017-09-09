@@ -1,5 +1,6 @@
 package com.nari.oauth2;
 
+import com.nari.oauth2.user.CustomJdbcUserDetailsManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -29,7 +30,6 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFactory;
-import org.springframework.security.provisioning.JdbcUserDetailsManager;
 
 import javax.sql.DataSource;
 import java.security.KeyPair;
@@ -49,8 +49,8 @@ public class OAuth2ServiceApplication {
     private DataSource dataSource;
 
     @Bean
-    public JdbcUserDetailsManager jdbcUserDetailsManager() {
-        JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager();
+    public CustomJdbcUserDetailsManager jdbcUserDetailsManager() {
+        CustomJdbcUserDetailsManager jdbcUserDetailsManager = new CustomJdbcUserDetailsManager();
         jdbcUserDetailsManager.setDataSource(dataSource);
         return jdbcUserDetailsManager;
     }
